@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "854832148827",
+    "firebase_url": "https://opinionpoll-6bf54.firebaseio.com",
+    "project_id": "opinionpoll-6bf54",
+    "storage_bucket": "opinionpoll-6bf54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854832148827:android:54657df6b750517be2aa7e",
+        "android_client_info": {
+          "package_name": "com.example.opinionpoll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854832148827-0bkiu9do8e6lioen8b5beckttqlmadl2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyho8N9Cu0HYz3TlIOYHdI0hrxRM1Q8Ow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854832148827-0bkiu9do8e6lioen8b5beckttqlmadl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="false"
+    android:layout_alignParentRight="false"
+    android:background="#bb7df5"
+    tools:context=".Create">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/create_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#bb7df5"
+        app:title="Create"
+        app:titleTextColor="#ffffff" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/create_toolbar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#efebfa">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_create_question"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Number of options : "
+                    android:textColor="#bb7df5"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textvewQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Question :"
+                    android:textColor="#AC66CA"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView_opt"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/card_option_num"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Options :"
+                    android:textColor="#bb7df5"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_create_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textvewQ"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:hint="Qustion"
+                        android:inputType="text"
+                        android:isScrollContainer="false"
+                        android:nestedScrollingEnabled="false"
+                        android:textColor="#000000"
+                        android:textColorHint="#FFFFFF"
+                        android:textSize="18sp"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="#bb8fce"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextAppearance="@style/MyHintStyle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_qstn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+
+                            android:fadeScrollbars="false"
+                            android:isScrollContainer="true"
+                            android:nestedScrollingEnabled="true"
+                            android:scrollbarAlwaysDrawVerticalTrack="true"
+                            android:scrollbars="vertical"
+                            android:textColorHighlight="#bb8fce"
+                            android:textColorLink="#bb8fce"
+                            android:verticalScrollbarPosition="right" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_option_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_num"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="20dp">
+
+
+                    <RadioGroup
+                        android:id="@+id/grp_opt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <RadioButton
+                            android:id="@+id/two_opt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#bb7df5"
+                            android:text="2 options" />
+
+                        <RadioButton
+                            android:id="@+id/three_opt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#bb7df5"
+                            android:text="3 options" />
+
+                        <RadioButton
+                            android:id="@+id/four_opt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#bb7df5"
+                            android:text="4 options" />
+                    </RadioGroup>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_create_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_opt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="20dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/inputOp1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center"
+                            android:hint="Option 1"
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            app:boxStrokeColor="#bb7df5"
+                            app:hintTextAppearance="@style/MyHintStyle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_opt1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/inputOp2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_below="@id/inputOp1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+
+                            android:gravity="center"
+                            android:hint="Option 2"
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            app:boxStrokeColor="#bb7df5"
+                            app:hintTextAppearance="@style/MyHintStyle">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_opt2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/inputOp3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_below="@id/inputOp2"
+                            android:layout_marginStart="10dp"
+
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:hint="Option 3"
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            app:boxStrokeColor="#bb7df5"
+                            app:hintTextAppearance="@style/MyHintStyle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_opt3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/inputOp4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_below="@id/inputOp3"
+                            android:layout_marginStart="10dp"
+
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:hint="Option 4"
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            app:boxStrokeColor="#bb7df5"
+                            app:hintTextAppearance="@style/MyHintStyle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_opt4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_btn_sbt"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_create_option"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#bb7df5"
+                    app:cardCornerRadius="20dp">
+
+                    <Button
+                        android:id="@+id/btn_sbt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="#bb7df5"
+                        android:fadeScrollbars="false"
+                        android:text="create poll"
+                        android:textColor="#ffffff" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

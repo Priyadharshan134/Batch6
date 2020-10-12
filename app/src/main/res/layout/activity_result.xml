@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1294EA"
+    tools:context=".Result">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/live_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#1294EA"
+        android:minHeight="50dp"
+        app:title="Result"
+        app:titleTextColor="#ffffff" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/live_title"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="#efebfa">
+
+        <ListView
+            android:id="@+id/listview_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/live_title"
+            android:layout_marginStart="5dp"
+            android:background="#efebfa">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/result_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fcfcfc"
+            android:gravity="center_horizontal"
+            android:text="No polls available"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DC6F64"
+    tools:context=".PollDisplay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/dis_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#DC6F64"
+        android:elevation="20dp"
+        app:title="Answer"
+        app:titleTextColor="#ffffff" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dis_toolbar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#efebfa">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/answer_card_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:id="@+id/dis_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dis_toolbar"
+                        android:layout_margin="10dp"
+                        android:text="Question"
+                        android:textColor="#DC6F64"
+                        android:textSize="20sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_answer_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/answer_card_question"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="20dp">
+
+                    <RadioGroup
+                        android:id="@+id/rad_grp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_option1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:gravity="center_vertical"
+                            android:textSize="17sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_option2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:gravity="center_vertical"
+                            android:textSize="17sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_option3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:gravity="center_vertical"
+                            android:textSize="17sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_option4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:gravity="center_vertical"
+                            android:textSize="17sp" />
+
+                    </RadioGroup>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_answer_options"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="20dp">
+
+                    <Button
+                        android:id="@+id/btn_vote"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#DC6F64"
+                        android:text="Submit poll"
+                        android:textColor="#ffffff" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

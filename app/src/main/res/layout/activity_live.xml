@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DC6F64"
+    tools:context=".Live">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/live_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="20dp"
+        app:cardBackgroundColor="#f1948a"
+        app:cardCornerRadius="5dp"
+        app:title="Live Poll"
+        app:titleTextColor="#ffffffff">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/live_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#efebfa">
+
+        <ListView
+            android:id="@+id/listview_live"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/live_title"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="#efebfa">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/live_defaut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="No polls available"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
